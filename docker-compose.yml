@@ -1,0 +1,38 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: centa-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Goestaf0895#
+      POSTGRES_DB: centa_company
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d centa_company"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: centa-app
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 3075
+      DATABASE_URL: postgresql://postgres:Goestaf0895%23@postgres:5432/centa_company
+      JWT_SECRET: e6dcfc3d9e686ef945d4d898a45beed2cbfa9134e53e9fa148a7f3b125efe0df287b68770415bf5de8125d75d7d5f6b2a9f0f09dd248afe9ffd35f0c96ab45d4
+      JWT_EXPIRES_IN: 10d
+      FRONTEND_URL: http://localhost:3075
+    ports:
+      - "3075:3075"
+
+volumes:
+  postgres_data:

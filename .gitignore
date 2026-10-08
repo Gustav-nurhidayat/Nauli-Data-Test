@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Build
+dist/
+dist-ssr/
+build/
+
+# Logs
+*.log
+logs/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Uploads / generated files
+uploads/
+
+# Backups / database dumps
+*.dump
+backend-centa/src/generated/prisma/
+
+# Local environment files
+backend-centa/.env
+frontend-centa/.env

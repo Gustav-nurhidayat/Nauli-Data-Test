@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  name      String
+  email     String    @unique
+  password  String
+  avatar    String?
+  createdAt DateTime  @default(now())
+  role      Role      @default(ADMIN)
+  updatedAt DateTime  @default(now()) @updatedAt
+  articles  Article[]
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  slug      String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now()) @updatedAt
+  articles  Article[]
+}
+
+model Article {
+  id          String        @id @default(cuid())
+
+  title       String
+  slug        String        @unique
+  excerpt     String?
+  content     String
+  thumbnail   String?
+
+  status      ArticleStatus @default(DRAFT)
+
+  authorId    String
+  categoryId  String
+
+  author       User     @relation(fields: [authorId], references: [id])
+  category     Category @relation(fields: [categoryId], references: [id])
+
+  publishedAt  DateTime?
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @default(now()) @updatedAt
+}
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+}
+
+enum ArticleStatus {
+  DRAFT
+  PUBLISHED
+}
+
+model Service {
+  id               String   @id @default(cuid())
+
+  title            String
+  slug             String   @unique
+
+  shortDescription String
+  description      String
+
+  icon             String?
+
+  thumbnail        String?
+
+  order            Int      @default(0)
+
+  isActive         Boolean  @default(true)
+
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
