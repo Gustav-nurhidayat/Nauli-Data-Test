@@ -419,7 +419,7 @@ X-Forwarded-For analysis
 
 The suspicious log entry contains:
 
-X-Forwarded-For="UEhBTlRPTXtCTFVFX0wwZ19IdW50M3JfTTRzdDNyfQ=="
+X-Forwarded-For="U0NFTkFSSU83NXtCTFVFX0wwR19IVW50M3JfTTRzdDNyfQ=="
 
 The string is a Base64-style encoded value.
 

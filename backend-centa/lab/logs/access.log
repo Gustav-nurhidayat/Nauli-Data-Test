@@ -6,4 +6,4 @@
 10.10.14.50 - - [07/Oct/2026:18:51:55 +0700] "GET /dashboard HTTP/1.1" 200 18452 "-" "Mozilla/5.0"
 10.10.14.50 - - [07/Oct/2026:18:52:11 +0700] "GET /api/dashboard/xss HTTP/1.1" 200 103 "-" "Mozilla/5.0"
 10.10.14.50 - - [07/Oct/2026:18:52:19 +0700] "GET /api/lab/collect?c=adm_sess HTTP/1.1" 200 72 "-" "Mozilla/5.0"
-10.10.14.50 - - [07/Oct/2026:18:53:10 +0700] "GET /api/dashboard HTTP/1.1" 200 921 "-" "Mozilla/5.0" X-Forwarded-For="UEhBTlRPTXtCTFVFX0wwZ19IdW50M3JfTTRzdDNyfQ=="
+10.10.14.50 - - [07/Oct/2026:18:53:10 +0700] "GET /api/dashboard HTTP/1.1" 200 921 "-" "Mozilla/5.0" X-Forwarded-For="U0NFTkFSSU83NXtCTFVFX0wwR19IVW50M3JfTTRzdDNyfQ=="
