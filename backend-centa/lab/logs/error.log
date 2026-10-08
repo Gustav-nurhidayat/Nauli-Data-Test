@@ -1,0 +1,8 @@
+2026-10-07 18:50:15 [WARN] WAF blocked payload containing <script from 10.10.14.50
+2026-10-07 18:50:48 [WARN] WAF blocked cookie access pattern from 10.10.14.50
+2026-10-07 18:51:02 [INFO] WAF bypass payload accepted: SVG event handler from 10.10.14.50
+2026-10-07 18:51:55 [INFO] Successful administrative dashboard access from 10.10.14.50
+2026-10-07 18:52:11 [INFO] Stored XSS payload reflected in dashboard
+2026-10-07 18:52:19 [CRITICAL] Cookie exfiltration telemetry received from 10.10.14.50
+2026-10-07 18:53:10 [CRITICAL] Authentication bypass anomaly
+2026-10-07 18:53:10 [CRITICAL] Cookie reuse detected: adm_sess from attacker subnet 10.10.14.0/24

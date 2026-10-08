@@ -30,3 +30,8 @@ backend-centa/src/generated/prisma/
 # Local environment files
 backend-centa/.env
 frontend-centa/.env
+
+
+!backend-centa/lab/logs/
+!backend-centa/lab/logs/access.log
+!backend-centa/lab/logs/error.log
