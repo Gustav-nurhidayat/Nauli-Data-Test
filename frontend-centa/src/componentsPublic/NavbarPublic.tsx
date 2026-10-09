@@ -482,7 +482,7 @@ export default function Navbar() {
               hover:shadow-[0_12px_40px_rgba(21,224,237,0.22)]
             "
           >
-            Work with us
+            Contact Me
 
             <ArrowRight
               className="
@@ -765,7 +765,7 @@ export default function Navbar() {
                 hover:shadow-[0_12px_40px_rgba(21,224,237,0.2)]
               "
             >
-              Work With Us
+              Contact Me
 
               <ArrowRight
                 className="
