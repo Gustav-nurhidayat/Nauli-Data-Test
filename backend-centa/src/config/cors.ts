@@ -3,6 +3,7 @@ import cors from "cors";
 const allowedOrigins = [
   process.env.FRONTEND_URL,
   "http://localhost:5173",
+  "http://127.0.0.1:3075",
 ];
 
 export const corsOptions = cors({

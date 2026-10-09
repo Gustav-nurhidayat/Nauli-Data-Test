@@ -14,10 +14,7 @@ export default function ProtectedRoute({
     loading,
   } = useAuth();
 
-  /**
-   * Jangan redirect sebelum
-   * pengecekan cookie selesai.
-   */
+  
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#060a12] text-white">
@@ -26,9 +23,6 @@ export default function ProtectedRoute({
     );
   }
 
-  /**
-   * Belum punya adm_sess
-   */
   if (!authenticated) {
     return (
       <Navigate
