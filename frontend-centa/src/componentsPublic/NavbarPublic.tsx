@@ -233,7 +233,7 @@ export default function Navbar() {
               lg:text-[27px]
             "
           >
-            ASESMENT
+            ASSESSMENT
           </span>
         </Link>
 
