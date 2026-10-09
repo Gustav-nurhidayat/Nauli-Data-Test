@@ -217,7 +217,7 @@ export default function Navbar() {
               lg:text-[27px]
             "
           >
-            Gustav 
+            GUSTAV
           </span>
 
           <span
@@ -233,7 +233,7 @@ export default function Navbar() {
               lg:text-[27px]
             "
           >
-            Test
+            ASESMENT
           </span>
         </Link>
 
